@@ -1,0 +1,33 @@
+.person {
+    width: 100vw;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.person > h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 90%;
+}
+
+.person > img {
+    width: 25vw;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.text {
+    width: 25vw;
+}
+
+.text p {
+    margin: 0;
+    font-size: larger;
+    font-weight: 500;
+    text-align: start;
+}

@@ -1,0 +1,41 @@
+.car {
+    width: 40vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(126, 143, 93, 0.8);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: start;
+}
+
+.car > p {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btnWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    width: 35%;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.button:active {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}

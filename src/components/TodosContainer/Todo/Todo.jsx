@@ -1,14 +1,15 @@
-const TodoComponent = ({todo}) => {
+import styles from './Todo.module.css';
+
+const Todo = ({todo}) => {
     const {userId, id, title} = todo;
 
     return (
-        <div>
+        <div className={styles.todo}>
             <p>UserId: {userId}</p>
             <p>ID: {id}</p>
             <p>Title: {title}</p>
-            <button>Info</button>
         </div>
     );
 };
 
-export default TodoComponent;
+export default Todo;

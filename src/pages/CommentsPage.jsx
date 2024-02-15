@@ -1,10 +1,10 @@
-import CommentsComponent from "../components/CommentsComponent/CommentsComponent";
+import Comments from "../components/CommentsContainer/Comments/Comments";
 
 const CommentsPage = () => {
 
     return (
         <div>
-            <CommentsComponent/>
+            <Comments/>
         </div>
     );
 };

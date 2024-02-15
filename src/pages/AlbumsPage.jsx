@@ -1,10 +1,10 @@
-import AlbumsComponent from "../components/AlbumsComponent/AlbumsComponent";
+import Albums from "../components/AlbumsContainer/Albums/Albums";
 
 const AlbumsPage = () => {
 
     return (
         <div>
-            <AlbumsComponent/>
+            <Albums/>
         </div>
     );
 };

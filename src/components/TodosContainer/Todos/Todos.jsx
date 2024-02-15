@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
-import {todosService} from "../../../services/todosService";
-import TodoComponent from "../TodoComponent/TodoComponent";
 
-const TodosComponent = () => {
+import {todosService} from "../../../services/todosService";
+import Todo from "../Todo/Todo";
+
+const Todos = () => {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
@@ -11,9 +12,9 @@ const TodosComponent = () => {
 
     return (
         <div>
-            {todos.map(todo => <TodoComponent key={todo.id} todo={todo}/>)}
+            {todos.map(todo => <Todo key={todo.id} todo={todo}/>)}
         </div>
     );
 };
 
-export default TodosComponent;
+export default Todos;

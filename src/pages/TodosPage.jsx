@@ -1,10 +1,10 @@
-import TodosComponent from "../components/TodosContainer/TodosComponent/TodosComponent";
+import Todos from "../components/TodosContainer/Todos/Todos";
 
 const TodosPage = () => {
 
     return (
         <div>
-            <TodosComponent/>
+            <Todos/>
         </div>
     );
 };

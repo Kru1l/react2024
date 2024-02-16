@@ -1,0 +1,21 @@
+.comment {
+    width: 40vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    background: rgb(255, 61, 2);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: start;
+}
+
+.comment > p {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+}

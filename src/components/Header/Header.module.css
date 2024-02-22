@@ -1,0 +1,23 @@
+.Header {
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+    background: wheat;
+    position: fixed;
+    top: 0;
+}
+
+.Header > a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 1vw;
+}
+
+a[class='active'] {
+    color: crimson;
+}

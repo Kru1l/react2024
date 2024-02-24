@@ -1,26 +1,51 @@
 import {useForm} from "react-hook-form";
-import Joi from "joi";
+import {joiResolver} from "@hookform/resolvers/joi";
 
+import './main.css';
 import {authService} from "../../services";
 import {registerValidator} from "../../validators";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const RegisterForm = () => {
-    const {register, handleSubmit, formState: {errors, isValid}, reset} = useForm({
+    const [error, setError] = useState(null);
+
+    const {
+        register,
+        handleSubmit,
+        formState: {errors, isValid}
+    } = useForm({
         mode: "onSubmit",
-        resolver: Joi.resolver(registerValidator)
+        resolver: joiResolver(registerValidator)
     });
 
-    const registration = async (data) => {
-        await authService.register(data);
+    const navigate = useNavigate();
+
+    const registration = async (user) => {
+        try {
+            await authService.register(user);
+            navigate('/login');
+        } catch (e) {
+            setError(true);
+        }
     }
 
     return (
-        <form name={'form'} onSubmit={handleSubmit(registration)}>
-            <label>Username: <input type="text" {...register('username')}/></label>
-            <label>Password: <input type="text" {...register('password')}/></label>
-            <label>Confirm password: <input type="text" {...register('re_password')}/></label>
-            <button>Login</button>
-        </form>
+        <div className={'regBlock'}>
+            <form className={'authForm'} onSubmit={handleSubmit(registration)}>
+                <h1>Регістрація користувача</h1>
+                {error && <span>User with this username already exists</span>}
+                <input type="text" placeholder={'Username'} {...register('username')}/>
+                {errors.username && <span>{errors.username.message}</span>}
+
+                <input type="text" placeholder={'Password'} {...register('password')}/>
+                {errors.password && <span>{errors.password.message}</span>}
+
+                <input type="text" placeholder={'Confirm password'} {...register('re_password')}/>
+                {errors.re_password && <span>{errors.re_password.message}</span>}
+                <button disabled={!isValid} id={'btnReg'}>Register</button>
+            </form>
+        </div>
     );
 };
 

@@ -3,7 +3,6 @@ import {createBrowserRouter, Navigate} from "react-router-dom";
 import {AuthLayout, MainLayout, PublicLayout} from "./layouts";
 import {CarsPage, LoginPage, RegisterPage} from "./pages";
 
-
 const router = createBrowserRouter([
     {
         path: '', element: <MainLayout/>, children: [

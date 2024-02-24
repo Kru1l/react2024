@@ -34,7 +34,7 @@ const CarForm = () => {
         try {
             await carService.create(data);
             changeTrigger();
-            reset();
+            // reset();
         } catch (e) {
             console.error(e);
         }

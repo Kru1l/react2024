@@ -1,22 +1,21 @@
+import {useState} from "react";
 import {useForm} from "react-hook-form";
+import {useNavigate} from "react-router-dom";
 
 import './main.css';
 import {authService} from "../../services";
-import {useNavigate} from "react-router-dom";
-import {useState} from "react";
 
 const LoginForm = () => {
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     const {
         register,
         handleSubmit,
         formState: {isValid}
     } = useForm({
-        mode: "onSubmit"
+        mode: "onBlur"
     });
-
-    const navigate = useNavigate();
 
     const login = async (user) => {
         try {
@@ -25,13 +24,14 @@ const LoginForm = () => {
         } catch (e) {
             setError(true);
         }
-    }
+    };
 
     return (
         <div className={'logBlock'}>
             <form className={'authForm'} onSubmit={handleSubmit(login)}>
                 <h1>Вхід в особистий кабінет</h1>
                 {error && <span>Username or password incorrect</span>}
+
                 <input type="text" placeholder={'Username'} {...register('username', {required: true})}/>
                 <input type="text" placeholder={'Password'} {...register('password', {required: true})}/>
 

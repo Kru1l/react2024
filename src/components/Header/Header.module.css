@@ -10,7 +10,7 @@
     top: 0;
 }
 
-.Header > a {
+.linksBlock > a {
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -20,4 +20,31 @@
 
 a[class='active'] {
     color: #22b2b2;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#me {
+    margin: 0 2vw;
+    color: #22b2b2;
+    font-size: 22px;
+}
+
+#logOut {
+    width: 12vw;
+    height: 30px;
+    background-color: #e9f3f3;
+    font-size: 17px;
+    border: 1px solid #989898;
+    border-radius: 10px;
+    margin-right: 2vw;
+}
+
+#logOut:active {
+    border: 1px solid black;
+    font-weight: bolder;
 }

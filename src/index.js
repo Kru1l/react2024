@@ -2,7 +2,6 @@ import {RouterProvider} from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 
 import {router} from "./router";
-
 import './index.css';
 import {ContextProvider} from "./hoc";
 

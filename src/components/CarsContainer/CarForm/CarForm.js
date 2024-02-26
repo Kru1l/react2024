@@ -8,7 +8,6 @@ import {useAppContext} from "../../../hooks";
 import {carValidator} from "../../../validators";
 
 const CarForm = () => {
-
     const {changeTrigger, carForUpdate, setCarForUpdate} = useAppContext();
 
     const {
@@ -34,7 +33,7 @@ const CarForm = () => {
         try {
             await carService.create(data);
             changeTrigger();
-            // reset();
+            reset();
         } catch (e) {
             console.error(e);
         }
@@ -45,7 +44,7 @@ const CarForm = () => {
         setCarForUpdate(null);
         changeTrigger();
         reset();
-    }
+    };
 
     return (
         <form className={styles.carForm} onSubmit={handleSubmit(carForUpdate ? update : save)}>

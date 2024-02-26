@@ -14,7 +14,7 @@ const urls = {
         base: cars,
         byId: (id) => `${cars}/${id}`
     }
-}
+};
 
 export {
     baseURL,

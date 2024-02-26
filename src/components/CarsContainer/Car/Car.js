@@ -10,7 +10,7 @@ const Car = ({car}) => {
     const handleDelete = async (id) => {
         await carService.deleteById(id);
         changeTrigger();
-    }
+    };
 
     return (
         <div className={styles.car}>

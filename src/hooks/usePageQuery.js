@@ -18,7 +18,7 @@ const usePageQuery = () => {
                 return prev
             });
         }
-    }
+    };
 };
 
 export {usePageQuery};

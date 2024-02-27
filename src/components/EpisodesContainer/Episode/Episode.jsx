@@ -5,7 +5,7 @@ import {useAppContext} from "../../../hooks";
 
 const Episode = ({episode}) => {
     const {id, name, characters, episode: chapter} = episode;
-    const {setNameEpisode, nameEpisode} = useAppContext();
+    const {setNameEpisode} = useAppContext();
     const navigate = useNavigate();
 
     const toCharacters = () => {

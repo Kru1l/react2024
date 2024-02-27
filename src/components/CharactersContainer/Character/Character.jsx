@@ -7,7 +7,6 @@ const Character = ({character}) => {
         <div className={styles.Character}>
             <p>ID: {id}</p>
             <p>Name: {name}</p>
-
             <img src={image} alt={name}/>
         </div>
     );

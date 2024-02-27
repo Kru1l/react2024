@@ -1,0 +1,17 @@
+.Header {
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    background: black;
+    color: white;
+}
+
+#title {
+    font-size: 45px;
+}
+

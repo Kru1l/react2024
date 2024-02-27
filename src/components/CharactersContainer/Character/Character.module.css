@@ -1,0 +1,17 @@
+.Character {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    background: silver;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.Character > p {
+    margin: 7px 0;
+    font-size: 18px;
+}

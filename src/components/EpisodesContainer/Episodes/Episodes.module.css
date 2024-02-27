@@ -1,0 +1,29 @@
+.WrapEpi {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.prevNextDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevNextDiv > button {
+    width: 10vw;
+    height: 25px;
+    background-color: #e9f3f3;
+    font-size: 17px;
+    border: 1px solid #989898;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.prevNextDiv > button:active {
+    border: 1px solid black;
+    font-weight: bolder;
+}

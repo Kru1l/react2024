@@ -1,9 +1,8 @@
 import {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
+import {useDispatch, useSelector} from "react-redux";
 
 import styles from './CarForm.module.css';
-import {carService} from "../../services";
 import {carActions} from "../../store";
 
 const CarForm = () => {
@@ -27,16 +26,13 @@ const CarForm = () => {
         }
     }, [carForUpdate, setValue]);
 
-    const save = async (data) => {
-        await carService.create(data);
-        dispatch(carActions.changeTrigger());
+    const save = async (car) => {
+        dispatch(carActions.create({car}));
         reset();
     };
 
-    const update = async (data) => {
-        await carService.updateById(carForUpdate.id, data);
-        dispatch(carActions.setCarForUpdate(null));
-        dispatch(carActions.changeTrigger());
+    const update = async (newCar) => {
+        dispatch(carActions.updateById({id: carForUpdate.id, newCar}));
         reset();
     };
 

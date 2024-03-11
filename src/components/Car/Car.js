@@ -2,16 +2,10 @@ import {useDispatch} from "react-redux";
 
 import styles from './Car.module.css';
 import {carActions} from "../../store";
-import {carService} from "../../services";
 
 const Car = ({car}) => {
     const {id, brand, price, year} = car;
     const dispatch = useDispatch();
-
-    const handleDelete = async () => {
-        await carService.deleteById(id);
-        dispatch(carActions.changeTrigger());
-    };
 
     return (
         <div className={styles.Car}>
@@ -21,7 +15,7 @@ const Car = ({car}) => {
             <p>Year: {year}</p>
 
             <button className={styles.btn} onClick={() => dispatch(carActions.setCarForUpdate(car))}>Update</button>
-            <button className={styles.btn} onClick={handleDelete}>Delete</button>
+            <button className={styles.btn} onClick={() => dispatch(carActions.deleteById({id}))}>Delete</button>
         </div>
     );
 };

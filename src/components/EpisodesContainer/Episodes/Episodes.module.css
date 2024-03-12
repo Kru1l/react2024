@@ -1,0 +1,7 @@
+.Episodes {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}

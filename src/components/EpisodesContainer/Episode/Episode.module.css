@@ -1,0 +1,24 @@
+.Episode {
+    width: 23vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+
+    background: silver;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin: 0 5px 10px;
+    cursor: pointer;
+}
+
+.Episode > p {
+    margin: 7px 0;
+    font-size: 18px;
+}
+
+.Episode:hover {
+    background: #979797;
+}
